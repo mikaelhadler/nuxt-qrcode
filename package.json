@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@chenfengyuan/vue-qrcode": "^2.0.0",
+    "@nuxtjs/robots": "^3.0.0",
     "html-to-image": "^1.11.11",
     "nuxt": "^3.12.2",
+    "nuxt-gtag": "^2.0.6",
     "qrcode": "^1.5.3"
   },
   "devDependencies": {
