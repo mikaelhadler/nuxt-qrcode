@@ -2,7 +2,8 @@
 import VueQrcode from "@chenfengyuan/vue-qrcode";
 import { toPng } from "html-to-image";
 import "~/public/main.css";
-
+const { initialize } = useGtag()
+initialize();
 useHead({
   title: "QR Code Generator",
   htmlAttrs: {
