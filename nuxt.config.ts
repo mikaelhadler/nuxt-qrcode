@@ -16,6 +16,9 @@ export default defineNuxtConfig({
       {
         id: "G-YR3VS1VKXQ",
         enabled: true,
+        config: {
+          page_title: 'Pretty QR Code'
+        }
       },
     ],
   ],
