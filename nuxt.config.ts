@@ -9,5 +9,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxtjs/robots", ["nuxt-gtag", { id: "G-YR3VS1VKXQ" }]],
+  modules: [
+    "@nuxtjs/robots",
+    [
+      "nuxt-gtag",
+      {
+        id: "G-YR3VS1VKXQ",
+        enabled: true,
+      },
+    ],
+  ],
 });
