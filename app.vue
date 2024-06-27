@@ -5,6 +5,9 @@ import "~/public/main.css";
 
 useHead({
   title: "QR Code Generator",
+  htmlAttrs: {
+    lang: "en"
+  },
   meta: [
     {
       name: "description",
@@ -47,7 +50,6 @@ const downloadQRCode = () => {
 };
 
 const keyPressHandler = (e) => {
-  console.log(e.target.value.trim());
   if (e.target.value) {
     generateQrCode();
   }
@@ -59,9 +61,11 @@ const generateQrCode = () => {
 <template>
   <div class="flex w-fit mx-auto min-h-full flex-col justify-center items-center px-6 py-12 lg:px-8">
     <h1 class="text-2xl font-bold mt-4">QR Code Generator</h1>
-    <p class="text-gray-500 mt-2">Enter what you want to generate QR code</p>
-    <input type="text" v-model="link" class="w-80 mt-4 p-2 border border-gray-300 rounded-md" spellcheck="false"
-      @keyup.enter="keyPressHandler" />
+    <label for="source" class="text-gray-500 mt-2 flex flex-col">
+      Enter what you want to generate QR code
+      <input id="source" type="text" v-model="link" class="w-80 mt-4 p-2 border border-gray-300 rounded-md"
+        spellcheck="false" @keyup.enter="keyPressHandler" />
+    </label>
     <div class="flex justify-center mt-4">
       <button target="_blank" rel="noopener"
         class="w-80 bg-yellow-400 rounded-lg text-gray-800 font-medium text-base md:text-lg py-3 px-8 md:px-12 hover:bg-yellow-500 transition-all duration-150 ease-in-out"
